@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="faq section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-12">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d4609.815174696595!2d-5.814922!3d54.711249!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4861a1a2a2c1993d%3A0x741f74a521dadf84!2s89%20Maritime%20Dr%2C%20Carrickfergus%20BT38%208GQ%2C%20UK!5e0!3m2!1sen!2sus!4v1585648498983!5m2!1sen!2sus" width="1110" height="505" frameborder="0" style="border:0; width: 100%;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+            </div>
+        </div>
+        <div class="row pt-md-5">
+
+            <div class="col col-md-6 right-col">
+                <div class="title">
+                    <h2>Frequently asked question.</h2>
+                    <p>Please read our FAQ before sending us a message.</p>
+                </div>
+
+                <div class="panel-group" id="accordion">
+                    {% for faq in faqs %}
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#{{faq.id}}">{{faq.title}}</a>
+                            </div>
+                            <div id="{{faq.id}}" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <div class="details">
+                                        <p>{{faq.content | safe}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col col-md-6">
+                <div class="title">
+                    <h2>CONTACT US</h2> 
+                </div>
+                {{contact | safe}}
+            </div>
+        </div> <!-- end row -->
+    </div> <!-- end container -->
+</section>
+{% endblock content %}

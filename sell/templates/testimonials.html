@@ -1,0 +1,27 @@
+{% load static %}
+<section class="testimonials testimonials--bg-white">
+    <div class="testimonials__inner">
+       <h3 class="testimonials__title">Customer Testimonials</h3>
+       <div class="testimonials__list">
+          {% for customer in customers %}
+          <div class="testimonials__item">
+             <div class="testimonials__photo">
+                <img src="media/{{customer.image}}" width="100" height="100" alt="" style="border-radius: 22px;">
+             </div>
+             <div class="testimonials__content">
+                <p class="testimonials__text">
+                   <span class="o"></span>{{customer.quote}}<span class="c"></span>
+                </p>
+                <p class="testimonials__author">
+                   <span class="testimonials__author-name">{{customer.customer_name}}</span>
+                   <span class="testimonials__author-info">{{customer.location}}</span>
+                </p>
+             </div>
+          </div>
+          {% endfor %}
+       </div>
+       <div class="testimonials__cta">
+          <a href="{{trip}}" class="btn btn--primary" target="_blank">Visit Our Amazon Store</a>
+       </div>
+    </div>
+ </section>

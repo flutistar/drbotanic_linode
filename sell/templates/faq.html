@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+{% load static %}
+<section class="faq section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col col-md-12">
+                {% for faq in faqs %}
+                    <h3 style="color: #777777; font-family: Lato, sans-serif;">
+                        {{faq.title}}
+                    </h3>
+                    <p>
+                        {{faq.content | safe}}
+                    </p>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>
+
+		
+{% endblock content %}
