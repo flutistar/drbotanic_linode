@@ -1,13 +1,16 @@
 from django.shortcuts import render
-from .models import Customer, Trip, Contact, Faq
+from .models import Customer, Trip, Contact, Faq, Favicon
+
 
 def home(request):
     trip = Trip.objects.all()
     customers = Customer.objects.all()
+    favicon = Favicon.objects.all()[:1].get()
     context = {
         'customers': customers,
         'trip':trip[0].trip_link, 
-        'title': 'Dr Botanic'
+        'title': 'DrBotanic Nutrition',
+        'favicon': favicon
         }
     return render(request, 'home.html', context)
 

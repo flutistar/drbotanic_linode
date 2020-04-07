@@ -26,7 +26,7 @@ SECURE_SSL_REDIRECT = False
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['drbotanic.net', 'localhost', '127.0.0.1', '139.162.240.150']
+ALLOWED_HOSTS = ['www.drbotanic.net', 'drbotanic.net', 'localhost', '127.0.0.1', '139.162.240.150']
 
 
 # Application definition

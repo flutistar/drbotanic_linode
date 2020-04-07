@@ -19,3 +19,5 @@ class Trip(models.Model):
         unique=True, 
         blank=True
     )
+class Favicon(models.Model):
+    favicon = models.ImageField(upload_to="favicon/", default='..{}img/favicon/favicon.png'.format(settings.STATIC_URL))

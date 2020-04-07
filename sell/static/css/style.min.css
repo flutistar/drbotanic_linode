@@ -964,15 +964,15 @@ mark {
 
 .intro__about-title {
 	padding-top: 13%;
-	font-family: "FaktPro-Blond", sans-serif;
-	text-align: center;
-	color: rgb(0, 0, 0);
-	letter-spacing: 1.9px;
-	text-shadow: 0 0 1px rgba(0, 0, 0, .25);
-	/* max-width: 645px; */
-	margin: 0 auto 30px;
-	font-size: 38px;
-	line-height: 1.12
+    font-family: "FaktPro-Blond", sans-serif;
+    text-align: center;
+    color: #fff;
+    letter-spacing: 1.9px;
+    text-shadow: 0 0 1px rgba(0, 0, 0, .25);
+    /* max-width: 645px; */
+    margin: 0 auto 30px;
+    font-size: 38px;
+    line-height: 1.12;
 }
 
 .intro__about-subtitle {
@@ -6245,8 +6245,9 @@ body.js-library-is-filtered .subscribe {
 		background-position: 50% 50%
 	}
 	.intro__about-title {
-		font-size: 55px;
-		letter-spacing: 2.5px
+		font-size: 70px;
+		letter-spacing: -1.5px;
+		font-weight: 600;
 	}
 	.intro__about-subtitle {
 		font-size: 22px
